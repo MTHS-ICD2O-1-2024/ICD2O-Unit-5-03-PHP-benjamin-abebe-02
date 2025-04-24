@@ -39,7 +39,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Watch a Movie, in PHP</span>
+        <span class="mdl-layout-title">Watch a Movie, in JS</span>
       </div>
     </header>
     <main class="mdl-layout__content">
@@ -49,33 +49,37 @@
 
       <!--  using a new div to prevent all the elements from sticking on the sides -->
       <div class="center-content">
-        <div class="page-content">Enter your age.</div>
+        <div class="page-content">results.</div>
         <br />
-        <form action="./answer.php" method="GET">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              name="user-age"
-              id="user-input" />
-            <label class="mdl-textfield__label" for="demo-input">Number...</label>
-            <span class="mdl-textfield__error">Input is not a number</span>
-          </div>
-          <br />
-          <button
-            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            onclick="myButtonClicked()"
-            type="submit">
-            Find Movie type!
-          </button>
-        </form>
-        <br />
-        <div class="page-content-answer">
-          <div id="answer"></div>
-        </div>
+        <form action="#">
       </div>
-    </main>
+      </form>
+      <br />
+      <div class="page-content-answer">
+        <?php
+        $userAge = $_GET["user-age"];
+        // proccess
+        if ($userAge <= 3) {
+          echo "<h4>Your to young so you can only waych G rated movies alone.</h4>";
+        } elseif ($userAge <= 9) {
+          echo "<h4>You can only watch G or PG rated movies alone.</h4>";
+        } elseif ($userAge <= 13) {
+          echo "<h4>You can only watch PG-13 rated movies alone.</h4>";
+        } else {
+          echo "<h4>You can only watch R rated movies alone.</h4>";
+        }
+        ?>
+      </br>
+        <a
+          href="./index.php"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="myButtonClicked()"
+          type="button">
+          Return!
+      </a>
+      </div>
+  </div>
+  </main>
   </div>
 </body>
 
