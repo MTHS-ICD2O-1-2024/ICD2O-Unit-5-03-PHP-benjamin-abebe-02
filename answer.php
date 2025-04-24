@@ -60,13 +60,13 @@
         $userAge = $_GET["user-age"];
         // proccess
         if ($userAge <= 3) {
-          echo "<h4>if you are $userage old, Your to young so you can only waych G rated movies alone.</h4>";
+          echo "<h4>if you are $userAge years old, Your to young so you can only waych G rated movies alone.</h4>";
         } elseif ($userAge <= 9) {
-          echo "<h4>if you are $userage old, You can only watch G or PG rated movies alone.</h4>";
+          echo "<h4>if you are $userAge years old, You can only watch G or PG rated movies alone.</h4>";
         } elseif ($userAge <= 13) {
-          echo "<h4>if you are $userage old, You can only watch PG-13 rated movies alone.</h4>";
+          echo "<h4>if you are $userAge years old, You can only watch PG-13 rated movies alone.</h4>";
         } else {
-          echo "<h4>if you are $userage old, then You can only watch R rated movies alone.</h4>";
+          echo "<h4>if you are $userAge years old, then You can only watch R rated movies alone.</h4>";
         }
         ?>
       </br>
