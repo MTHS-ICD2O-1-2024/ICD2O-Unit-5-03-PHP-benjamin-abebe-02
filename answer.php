@@ -39,7 +39,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Watch a Movie, in JS</span>
+        <span class="mdl-layout-title">Watch a Movie, in PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
@@ -60,13 +60,13 @@
         $userAge = $_GET["user-age"];
         // proccess
         if ($userAge <= 3) {
-          echo "<h4>Your to young so you can only waych G rated movies alone.</h4>";
+          echo "<h4>if you are $userage old, Your to young so you can only waych G rated movies alone.</h4>";
         } elseif ($userAge <= 9) {
-          echo "<h4>You can only watch G or PG rated movies alone.</h4>";
+          echo "<h4>if you are $userage old, You can only watch G or PG rated movies alone.</h4>";
         } elseif ($userAge <= 13) {
-          echo "<h4>You can only watch PG-13 rated movies alone.</h4>";
+          echo "<h4>if you are $userage old, You can only watch PG-13 rated movies alone.</h4>";
         } else {
-          echo "<h4>You can only watch R rated movies alone.</h4>";
+          echo "<h4>if you are $userage old, then You can only watch R rated movies alone.</h4>";
         }
         ?>
       </br>
